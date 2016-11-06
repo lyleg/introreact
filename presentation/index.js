@@ -219,6 +219,8 @@ export default class Presentation extends React.Component {
             <Heading size={4} caps textColor="primary" textFont="primary">
               Flux
             </Heading>
+              <Text>The concept "Flux" is simply that your view triggers an event (say, after user types a name in a text field), that event updates a model, then the model triggers an event, and the view responds to that model's event by re-rendering with the latest data. That's it.</Text>
+              <Text>Andrew Ray, http://blog.andrewray.me/reactjs-for-stupid-people/</Text>
             <Image src={images.flux.replace("/", "")} margin="0px auto 40px" height="293px"/>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
@@ -248,7 +250,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Relay and GraphQL
+              Relay and GraphQL(might just make this an "AND MORE" page and list various other items)
             </Heading>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
