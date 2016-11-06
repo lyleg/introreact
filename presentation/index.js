@@ -65,7 +65,7 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  city: require("../assets/city.jpg"),
+  flux: require("../assets/flux.png"),
   react: require("../assets/react.png"),
   logo: require("../assets/formidable-logo.svg"),
   markdown: require("../assets/markdown.png")
@@ -78,11 +78,58 @@ const theme = createTheme({
   background: "#2A2C2E"
 });
 
+/*
+<Slide>
+  <Heading>Who am I?</Heading>
+  <Appear>
+    Lyle Garza, Engineering Manager at Visa
+    We are hiring!
+  </Appear>
+</Slide>*/
+
 export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
+        <Slide transition={["zoom"]} bgColor="background">
+          <Heading>Who am I?</Heading>
+          <Appear>
+            <p>Lyle Garza, Engineering Manager at Visa
+            We are hiring!</p>
+          </Appear>
+        </Slide>
+        <Slide bgColor = "background">
+          <Heading>Why are we Here?</Heading>
+          <Appear>
+            <Text>For React and Stuff</Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor = "background">
+          <Heading>Austin ReactJS Meetup</Heading>
+          <List>
+            <Appear>
+              <ListItem>
+                1st Monday of every month
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Two speakers 30-45 minutes
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Food and beverages provide
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Meet at TBD after!
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
           <Slide transition={["zoom"]} bgColor="background">
             <Heading size={1} fit caps lineHeight={1}>
               Intro to React
@@ -91,6 +138,7 @@ export default class Presentation extends React.Component {
                and the React Ecosystem
             </Heading>
           </Slide>
+
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Image src={images.react.replace("/", "")} margin="0px auto 40px" height="293px"/>
             <Heading size={2} caps fit textColor="primary" textFont="primary">
@@ -108,13 +156,25 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Add more</ListItem></Appear>
             </List>
           </Slide>
-          <Slide bgColor = "background">
-            <Heading>JSX</Heading>
-          </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">
               VDOM? Reconcilliation, etc
             </Heading>
+          </Slide>
+          <Slide bgColor = "background">
+            <Heading>JSX</Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/createElement.example")}
+              margin="20px auto"
+            />
+            <Appear>
+              <CodePane
+                lang="js"
+                source={require("raw!../assets/jsx.example")}
+                margin="20px auto"
+              />
+           </Appear>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">
@@ -150,16 +210,41 @@ export default class Presentation extends React.Component {
             <Heading size={2} caps fit textColor="primary" textFont="primary">
               React Native
             </Heading>
+            <CodePane
+              lang = "js"
+              source={require("raw!../assets/react-native.example")}
+            />
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
+            <Heading size={4} caps textColor="primary" textFont="primary">
               Flux
             </Heading>
+            <Image src={images.flux.replace("/", "")} margin="0px auto 40px" height="293px"/>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Redux + thunks and saga
+              Let's learn all about Redux
             </Heading>
+            <Appear>
+              <div>
+                <Heading>Next Month!</Heading>
+              </div>
+            </Appear>
+          </Slide>
+          <Slide bgColor = "background">
+            <Text>
+              React and Redux have made a huge impact on front end web development -- they are amazing tools, but the pace of change is very fast and best practices are hard to keep up with. Ryan Vice is here to share some practical advice based on the real-world experience he and his team have gained over multiple projects and while developing their own custom React boilerplate focused on developer ergonomics.
+            </Text>
+          </Slide>
+          <Slide bgColor = "background">
+            <List>
+              <ListItem>Auth strategy </ListItem>
+              <ListItem>Forms and validation </ListItem>
+              <ListItem>Testing and debugging</ListItem>
+              <ListItem>Redux patterns and file organization </ListItem>
+              <ListItem>Good lean devops practices </ListItem>
+              <ListItem>Async, routing, error handling and more</ListItem>
+            </List>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">
@@ -173,7 +258,7 @@ export default class Presentation extends React.Component {
               margin="20px auto"
             />
           </Slide>
-          <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
+          <Slide transition={["slide"]} bgImage={images.flux.replace("/", "")} bgDarken={0.75}>
             <Appear fid="1">
               <Heading size={1} caps fit textColor="primary">
                 Full Width
