@@ -68,6 +68,7 @@ const images = {
   flux: require("../assets/flux.png"),
   react: require("../assets/react.png"),
   logo: require("../assets/formidable-logo.svg"),
+  vdom: require("../assets/granular-dom-updates.gif"),
   markdown: require("../assets/markdown.png")
 };
 
@@ -75,6 +76,7 @@ preloader(images);
 
 const theme = createTheme({
   primary: "#FFFFFF",
+  textColor: "#FFFFFF",
   background: "#2A2C2E"
 });
 
@@ -95,36 +97,38 @@ export default class Presentation extends React.Component {
         <Slide transition={["zoom"]} bgColor="background">
           <Heading>Who am I?</Heading>
           <Appear>
-            <p>Lyle Garza, Engineering Manager at Visa
-            We are hiring!</p>
+            <div>
+              <Text textColor = "primary">Lyle Garza, Engineering Manager at Visa</Text>
+              <Text textColor = "primary">We are hiring React Developers!</Text>
+            </div>
           </Appear>
         </Slide>
         <Slide bgColor = "background">
           <Heading>Why are we Here?</Heading>
           <Appear>
-            <Text>For React and Stuff</Text>
+            <Text textColor = "primary">For React and Stuff</Text>
           </Appear>
         </Slide>
         <Slide bgColor = "background">
           <Heading>Austin ReactJS Meetup</Heading>
           <List>
             <Appear>
-              <ListItem>
+              <ListItem textColor = "primary">
                 1st Monday of every month
               </ListItem>
             </Appear>
             <Appear>
-              <ListItem>
+              <ListItem textColor = "primary">
                 Two speakers 30-45 minutes
               </ListItem>
             </Appear>
             <Appear>
-              <ListItem>
+              <ListItem textColor = "primary">
                 Food and beverages provide
               </ListItem>
             </Appear>
             <Appear>
-              <ListItem>
+              <ListItem textColor = "primary">
                 Meet at TBD after!
               </ListItem>
             </Appear>
@@ -148,18 +152,22 @@ export default class Presentation extends React.Component {
           <Slide bgColor = "background">
             <Heading size = {5}>React is a JavaScript Library for Building User Interfaces</Heading>
             <List>
-              <Appear><ListItem>Declarative</ListItem></Appear>
-              <Appear><ListItem>Component Based</ListItem></Appear>
-              <Appear><ListItem>Battle Tested</ListItem></Appear>
-              <Appear><ListItem>Portable</ListItem></Appear>
-              <Appear><ListItem>Testable</ListItem></Appear>
-              <Appear><ListItem>Add more</ListItem></Appear>
+              <Appear><ListItem textColor = "primary">Declarative</ListItem></Appear>
+              <Appear><ListItem textColor = "primary">Component Based</ListItem></Appear>
+              <Appear><ListItem textColor = "primary">Battle Tested</ListItem></Appear>
+              <Appear><ListItem textColor = "primary">Portable</ListItem></Appear>
+              <Appear><ListItem textColor = "primary">Testable</ListItem></Appear>
             </List>
+          </Slide>
+          <Slide bgColor = "background">
+            <Heading>Declarative UI</Heading>
+            <Text textColor = "primary">Declarative description</Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">
               VDOM? Reconcilliation, etc
             </Heading>
+            <Image src={images.vdom.replace("/", "")} width="175px"/>
           </Slide>
           <Slide bgColor = "background">
             <Heading>JSX</Heading>
@@ -175,6 +183,10 @@ export default class Presentation extends React.Component {
                 margin="20px auto"
               />
            </Appear>
+          </Slide>
+          <Slide>
+            <Heading>Component Based</Heading>
+            <Text>Talk about components</Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">
@@ -196,10 +208,13 @@ export default class Presentation extends React.Component {
               PropTypes and Flowtypes
             </Heading>
           </Slide>
-          <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Testing
-            </Heading>
+          <Slide>
+            <Heading>Battle Tested</Heading>
+            <Text>Add Logos</Text>
+          </Slide>
+          <Slide>
+            <Heading>Portable</Heading>
+            <Text>intro to other targets</Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">
@@ -216,11 +231,19 @@ export default class Presentation extends React.Component {
             />
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
+            <Heading size={2} caps fit textColor="primary" textFont="primary">
+              Testing React
+            </Heading>
+          </Slide>
+          <Slide>
+            <Heading>Beyond the View</Heading>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={4} caps textColor="primary" textFont="primary">
               Flux
             </Heading>
-              <Text>The concept "Flux" is simply that your view triggers an event (say, after user types a name in a text field), that event updates a model, then the model triggers an event, and the view responds to that model's event by re-rendering with the latest data. That's it.</Text>
-              <Text>Andrew Ray, http://blog.andrewray.me/reactjs-for-stupid-people/</Text>
+              <Text textColor = "primary">The concept "Flux" is simply that your view triggers an event (say, after user types a name in a text field), that event updates a model, then the model triggers an event, and the view responds to that model's event by re-rendering with the latest data. That's it.</Text>
+              <Text textColor = "primary">--Andrew Ray, http://blog.andrewray.me/reactjs-for-stupid-people/</Text>
             <Image src={images.flux.replace("/", "")} margin="0px auto 40px" height="293px"/>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
@@ -234,18 +257,18 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
           <Slide bgColor = "background">
-            <Text>
+            <Text textColor = "primary">
               React and Redux have made a huge impact on front end web development -- they are amazing tools, but the pace of change is very fast and best practices are hard to keep up with. Ryan Vice is here to share some practical advice based on the real-world experience he and his team have gained over multiple projects and while developing their own custom React boilerplate focused on developer ergonomics.
             </Text>
           </Slide>
           <Slide bgColor = "background">
             <List>
-              <ListItem>Auth strategy </ListItem>
-              <ListItem>Forms and validation </ListItem>
-              <ListItem>Testing and debugging</ListItem>
-              <ListItem>Redux patterns and file organization </ListItem>
-              <ListItem>Good lean devops practices </ListItem>
-              <ListItem>Async, routing, error handling and more</ListItem>
+              <ListItem textColor = "primary">Auth strategy </ListItem>
+              <ListItem textColor = "primary">Forms and validation </ListItem>
+              <ListItem textColor = "primary">Testing and debugging</ListItem>
+              <ListItem textColor = "primary">Redux patterns and file organization </ListItem>
+              <ListItem textColor = "primary">Good lean devops practices </ListItem>
+              <ListItem textColor = "primary">Async, routing, error handling and more</ListItem>
             </List>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
