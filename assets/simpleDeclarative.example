@@ -1,0 +1,4 @@
+appModel.on('change',()=>{
+  let appHTML = buildAppHTML(appModel);
+  $("#app").html(appHTML);
+})
