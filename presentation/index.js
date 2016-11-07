@@ -235,8 +235,13 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">
-              PropTypes and Flowtypes
+              Use PropTypes
             </Heading>
+            <CodePane lang = "js" source={require("raw!../assets/PropTypes.example")}/>
+          </Slide>
+          <Slide bgColor = "background">
+            <Heading>Or with Flow</Heading>
+            <CodePane lang = "js" source={require("raw!../assets/flowTypes.example")}/>
           </Slide>
           <Slide bgColor = "background">
             <Heading>Portable</Heading>

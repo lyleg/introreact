@@ -1,0 +1,12 @@
+type Props = {
+  name: string
+}
+
+class Greeting extends React.Component {
+  props:Props;
+  render() {
+    return (
+      <h1>Hello, {this.props.name}</h1>
+    );
+  }
+}
