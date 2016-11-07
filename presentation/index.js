@@ -391,6 +391,12 @@ export default class Presentation extends React.Component {
                   React Native
                 </ListItem>
                 <ListItem textColor = "primary">
+                  Animations
+                </ListItem>
+                <ListItem textColor = "primary">
+                  React Fiber
+                </ListItem>
+                <ListItem textColor = "primary">
                   Relay
                 </ListItem>
                 <ListItem textColor = "primary">
