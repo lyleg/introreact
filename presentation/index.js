@@ -100,14 +100,13 @@ export default class Presentation extends React.Component {
           <Appear>
             <div>
               <Text textColor = "primary">Lyle Garza, Engineering Manager at Visa</Text>
-              <Text textColor = "primary">We are hiring React Developers!</Text>
             </div>
           </Appear>
         </Slide>
         <Slide bgColor = "background">
           <Heading>Why are we Here?</Heading>
           <Appear>
-            <Text textColor = "primary">For React and Stuff</Text>
+            <Text textColor = "primary">To build a community around ReactJS</Text>
           </Appear>
         </Slide>
         <Slide bgColor = "background">
@@ -125,7 +124,7 @@ export default class Presentation extends React.Component {
             </Appear>
             <Appear>
               <ListItem textColor = "primary">
-                Food and beverages provide
+                Food and beverages provided
               </ListItem>
             </Appear>
             <Appear>
@@ -151,7 +150,7 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide bgColor = "background">
-            <Heading size = {5}>React is a JavaScript Library for Building User Interfaces</Heading>
+            <Heading size = {5} textColor = "primary">React is a JavaScript Library for Building User Interfaces</Heading>
             <List>
               <Appear><ListItem textColor = "primary">Declarative</ListItem></Appear>
               <Appear><ListItem textColor = "primary">Component Based</ListItem></Appear>
@@ -205,12 +204,15 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide bgColor = "background">
             <Heading>Functional Component</Heading>
+            <CodePane lang = "js" source={require("raw!../assets/functional.example")}/>
           </Slide>
           <Slide bgColor = "background">
             <Heading>Extend React.Component</Heading>
+            <CodePane lang = "js" source={require("raw!../assets/class.example")}/>
           </Slide>
           <Slide bgColor = "background">
             <Heading>React.createClass</Heading>
+            <CodePane lang = "js" source={require("raw!../assets/createClass.example")}/>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={4} caps textColor="primary" textFont="primary">
@@ -226,7 +228,43 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide bgColor = "background">
+            <Heading textColor = "primary" size = {4}>One Component's state is another's Props</Heading>
+            <CodePane lang = "js" source={require("raw!../assets/stateProps.example")}/>
+          </Slide>
+          <Slide bgColor = "background">
             <Heading>LifeCycle</Heading>
+            <Text textColor = "primary">React provides several lifecyle methods in it's mounting, updating, and unmounting phases</Text>
+          </Slide>
+          <Slide bgColor = "background">
+            <Heading size = {4} textColor = "primary">Mounting</Heading>
+            <Appear>
+              <List>
+                <ListItem textColor = "primary">constructor</ListItem>
+                <ListItem textColor = "primary">componentWillMount</ListItem>
+                <ListItem textColor = "primary">render</ListItem>
+                <ListItem textColor = "primary">componentDidMount(Side Effects Here)</ListItem>
+              </List>
+            </Appear>
+          </Slide>
+          <Slide bgColor = "background">
+            <Heading size = {4} textColor = "primary">Updating</Heading>
+            <Appear>
+              <List>
+                <ListItem textColor = "primary">componentWillReceiveProps</ListItem>
+                <ListItem textColor = "primary">shouldComponentUpdate</ListItem>
+                <ListItem textColor = "primary">componentWillUpdate</ListItem>
+                <ListItem textColor = "primary">render</ListItem>
+                <ListItem textColor = "primary">componentDidUpdate</ListItem>
+              </List>
+            </Appear>
+          </Slide>
+          <Slide bgColor = "background">
+            <Heading size = {4} textColor = "primary">UnMounting</Heading>
+            <Appear>
+              <List>
+                <ListItem textColor = "primary">componentWillUnmount(don't forget to put cleanup here!)</ListItem>
+              </List>
+            </Appear>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">

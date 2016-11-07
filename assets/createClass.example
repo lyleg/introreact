@@ -1,0 +1,14 @@
+
+var localizeMixin = {
+  getGreeting:function(){
+    return 'Hola'
+  }
+}
+
+var Greeting = React.createClass({
+  mixins:[localizeMixin],
+  render: function() {
+    var greeting = getGreeting();
+    return <h1>{greeting}, {this.props.name}</h1>;
+  }
+});

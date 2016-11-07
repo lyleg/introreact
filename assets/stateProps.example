@@ -1,0 +1,16 @@
+class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      name: 'Lyle'
+    }
+  }
+  render() {
+    return <Welcome name = {this.state.name} />;
+  }
+}
+
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
