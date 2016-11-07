@@ -159,6 +159,22 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
           <Slide bgColor = "background">
+            <Heading>How do I use it?</Heading>
+            <Appear>
+              <List>
+                <ListItem textColor = "primary">Create React App</ListItem>
+                <ListItem textColor = "primary">npm install --save react react-dom</ListItem>
+              </List>
+            </Appear>
+            <Appear>
+              <CodePane
+                lang="js"
+                source={require("raw!../assets/scriptInclude.example")}
+                margin="20px auto"
+              />
+            </Appear>
+          </Slide>
+          <Slide bgColor = "background">
             <Heading>Declarative UI</Heading>
             <Text textColor = "primary">Declarative programming is a non-imperative style of programming
              in which programs describe their desired results without explicitly listing commands or steps
@@ -259,7 +275,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
           <Slide bgColor = "background">
-            <Heading size = {4} textColor = "primary">UnMounting</Heading>
+            <Heading size = {4} textColor = "primary">Unmounting</Heading>
             <Appear>
               <List>
                 <ListItem textColor = "primary">componentWillUnmount(don't forget to put cleanup here!)</ListItem>
