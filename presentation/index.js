@@ -328,6 +328,14 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
           <Slide bgColor = "background">
+            <Heading>Snapshot</Heading>
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/snapshot.example")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide bgColor = "background">
             <Heading>Enzyme</Heading>
             <Text textColor = "primary">Enzyme is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output.</Text>
             <Text textColor = "primary">Enzyme's API is meant to be intuitive and flexible by mimicking jQuery's API for DOM manipulation and traversal.</Text>
