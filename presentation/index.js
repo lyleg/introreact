@@ -127,11 +127,6 @@ export default class Presentation extends React.Component {
                 Food and beverages provided
               </ListItem>
             </Appear>
-            <Appear>
-              <ListItem textColor = "primary">
-                Meet at TBD after!
-              </ListItem>
-            </Appear>
           </List>
         </Slide>
           <Slide transition={["zoom"]} bgColor="background">
@@ -240,8 +235,9 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Examples of state
+              State
             </Heading>
+            <Text textColor = "primary">Data that is private and only owned by a component</Text>
           </Slide>
           <Slide bgColor = "background">
             <Heading textColor = "primary" size = {4}>One Component's state is another's Props</Heading>
@@ -286,6 +282,23 @@ export default class Presentation extends React.Component {
             <Heading size={2} caps fit textColor="primary" textFont="primary">
               Reusability
             </Heading>
+            <Appear>
+              <List>
+                <ListItem textColor = "primary">
+                  Mixins(Not Recommended)
+                </ListItem>
+                <ListItem textColor = "primary">
+                  Inheritance
+                </ListItem>
+                <ListItem textColor = "primary">
+                  HoC
+                </ListItem>
+              </List>
+            </Appear>
+          </Slide>
+          <Slide bgColor = "background">
+            <Heading>Higher Order Components</Heading>
+            <Text textColor = "primary">A higher-order component is just a function that takes an existing component and returns another component that wraps it. -- Dan Abramov</Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">
@@ -297,31 +310,34 @@ export default class Presentation extends React.Component {
             <Heading>Or with Flow</Heading>
             <CodePane lang = "js" source={require("raw!../assets/flowTypes.example")}/>
           </Slide>
-          <Slide bgColor = "background">
-            <Heading>Portable</Heading>
-            <Text textColor = "primary">intro to other targets</Text>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Server Side Rendering
-            </Heading>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              React Native
-            </Heading>
-            <CodePane
-              lang = "js"
-              source={require("raw!../assets/react-native.example")}
-            />
-          </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">
               Testing React
             </Heading>
           </Slide>
-          <Slide>
-            <Heading>Beyond the View</Heading>
+          <Slide bgColor = "background">
+            <Heading>Jest</Heading>
+            <List>
+              <ListItem textColor = "primary">
+                Renderer
+              </ListItem>
+              <ListItem textColor = "primary">
+                Snapshot Testing
+              </ListItem>
+              <ListItem textColor = "primary">Can be used with Enzyme</ListItem>
+            </List>
+          </Slide>
+          <Slide bgColor = "background">
+            <Heading>Enzyme</Heading>
+            <Text textColor = "primary">Enzyme is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output.</Text>
+            <Text textColor = "primary">Enzyme's API is meant to be intuitive and flexible by mimicking jQuery's API for DOM manipulation and traversal.</Text>
+          </Slide>
+          <Slide bgColor = "background">
+            <CodePane
+              lang="js"
+              source={require("raw!../assets/enzyme.example")}
+              margin="20px auto"
+            />
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={4} caps textColor="primary" textFont="primary">
@@ -356,10 +372,24 @@ export default class Presentation extends React.Component {
               <ListItem textColor = "primary">Async, routing, error handling and more</ListItem>
             </List>
           </Slide>
-          <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Relay and GraphQL(might just make this an "AND MORE" page and list various other items)
-            </Heading>
+          <Slide bgColor = "background">
+            <Heading>What else?</Heading>
+            <Appear>
+              <List>
+                <ListItem textColor = "primary">
+                  Server Side Rendering
+                </ListItem>
+                <ListItem textColor = "primary">
+                  React Native
+                </ListItem>
+                <ListItem textColor = "primary">
+                  Relay
+                </ListItem>
+                <ListItem textColor = "primary">
+                  GraphQL
+                </ListItem>
+              </List>
+            </Appear>
           </Slide>
         </Deck>
       </Spectacle>
