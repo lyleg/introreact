@@ -234,7 +234,7 @@ export default class Presentation extends React.Component {
             <Text textColor = "primary">All React components must act like pure functions with respect to their props</Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
+            <Heading size={2} caps textColor="primary" textFont="primary">
               State
             </Heading>
             <Text textColor = "primary">Data that is private and only owned by a component</Text>
@@ -299,6 +299,12 @@ export default class Presentation extends React.Component {
           <Slide bgColor = "background">
             <Heading>Higher Order Components</Heading>
             <Text textColor = "primary">A higher-order component is just a function that takes an existing component and returns another component that wraps it. -- Dan Abramov</Text>
+          </Slide>
+          <Slide bgColor = "background">
+            <CodePane lang = "js" source={require("raw!../assets/hocExample.example")}/>
+          </Slide>
+          <Slide bgColor = "background">
+            <CodePane lang = "js" source={require("raw!../assets/profile.example")}/>
           </Slide>
           <Slide transition={["slide"]} bgColor="background" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="primary" textFont="primary">
